@@ -1,5 +1,5 @@
 const sortByDescendingFriendCount = (users) =>
-  [...users].sort((a, b) => b.friends.length - a.friends.length);
+  users.toSorted((a, b) => b.friends.length - a.friends.length);
 
 console.log(
   sortByDescendingFriendCount([
@@ -37,10 +37,9 @@ console.log(
       name: "Sheree Anthony",
       friends: ["Goldie Gentry", "Briana Decker"],
       gender: "female",
-    }, 
+    },
   ])
 );
-
 // [
 //   {
 //     name: "Ross Vazquez",
